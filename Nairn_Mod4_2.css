@@ -1,0 +1,45 @@
+#image-gallery {
+	display: grid;
+	grid-template-columns: auto auto auto;
+	margin-top: 10%;
+}
+
+h1 {
+	font-family: 'Play', sans-serif;
+	text-align: center;
+	color: rgba(20, 75, 184, 100);
+}
+
+h3 {
+	font-family: 'Play', sans-serif;
+	text-align: center;
+	color: rgba(6, 46, 125, 100);
+}
+
+figure {
+	text-align: center;
+}
+
+figcaption {
+	font-family: 'Play', sans-serif;
+	font-style: italic;
+	font-size: .75em;
+	color: rgba(92, 110, 145, 100);
+}
+
+.return {
+	float: right;
+	width: 100%;
+	margin-top: 60%;
+	margin-bottom: 20px;
+}
+
+a {
+	font-family: 'Titillium Web', sans-serif;
+	float: right;
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
