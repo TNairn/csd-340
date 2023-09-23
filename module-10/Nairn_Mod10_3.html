@@ -1,0 +1,52 @@
+<!-- Taylor Nairn : Assignment 10.3 -->
+<!DOCTYPE html>
+<html lang=en>
+	<head>
+		<title>CSD 340 Web Development with HTML and CSS</title>
+		<script>
+			function rotateImage(image){
+				var newNode = document.createElement("img");
+				newNode.src = image.src;
+				newNode.alt = "Rotated Image";
+				newNode.style.width = "550px";
+				newNode.style.height = "367px";
+				newNode.style.transform = "rotate(180deg)";
+				image.parentNode.replaceChild(newNode, image);
+			}
+		</script>
+	</head>
+	<body>
+		<h1>Assignment 10.3: JavaScript - Part 2</h1>
+		<div>
+			<a href=#
+				onmouseout="pumpkin.src='pumpkin_1.jpg';"
+				onmouseover= "pumpkin.src='pumpkin_2.jpg';"
+				onclick="rotateImage(document.getElementById('pumpkin'))">
+				<img id="pumpkin" alt="Pumpkin" src="pumpkin_1.jpg" width="550" height="367">
+			</a>
+			<br>
+			<div
+				onmouseover="this.style.color='blue';"
+				onmouseout= "this.style.color='black';">
+
+				Hover the image to change colors. Click the image to rotate it.
+			</div>
+		</div>
+		<br>
+		<div>
+			<a href=#
+				onmouseout="leaves.src='leaves_1.jpg';"
+				onmouseover= "leaves.src='leaves_2.jpg';"
+				onclick="rotateImage(document.getElementById('leaves'))">
+				<img id="leaves" alt="Leaves" src="leaves_1.jpg" width="550" height="367">
+			</a>
+			<br>
+			<div
+				onmouseover="this.style.color='blue';"
+				onmouseout= "this.style.color='black';">
+
+				Hover the image to change colors. Click the image to rotate it.
+			</div>
+		</div>
+	</body>
+</html>
