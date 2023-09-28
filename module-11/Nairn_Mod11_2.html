@@ -1,0 +1,69 @@
+<!-- Taylor Nairn : Assignment 11.2 -->
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>CSD 340 Web Development with HTML and CSS</title>
+        <link href="Nairn_Mod11_2.css" type="text/css" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Play&family=Titillium+Web&display=swap" rel="stylesheet">
+
+        <script>
+            var list = []; // Array to store list items
+            var listElement = document.createElement("ul"); // Unordered list to add array elements to
+
+            // Clears any white space and adds text to the array
+            function add(text) {
+                text = text.trim();
+
+                if(text != ""){
+                    list.push(text);
+                    alert(text + " was added to the list!");
+                }
+                document.getElementById("text").value = "";
+                listElement.innerHTML = '';
+            }
+
+            // Deletes the last element in the array
+            function deleteLast() {
+                list.pop();
+                listElement.innerHTML = '';
+            }
+
+            // Displays the list
+            function display() {
+                listElement.innerHTML = '';
+                // Loop through the array and create list items
+                for (var i = 0; i < list.length; i++) {
+                    var listItem = document.createElement("li");
+                    listItem.appendChild(document.createTextNode("Item " + (i + 1) + " = " + list[i]));
+                    listElement.appendChild(listItem);
+                }
+
+                // Append the list under the <hr> element
+                document.body.insertBefore(listElement, document.querySelector("footer"));
+            }
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <h1>Assignment 11.2: JavaScript - Part 3</h1>
+            <h3>Interactive To Do List:</h3>
+            <p>Enter text into the text box and click <span>Add</span> to add it to the list.</p>
+            <p>Click <span>Delete Last Entry</span> to remove the most recent item.</p>
+            <p>Click the <span>Display</span> button to see the current list of items.</p>
+            <br>
+            <input type="text" id="text">
+            <button onclick="add(document.getElementById('text').value);">Add</button>
+            <button onclick="deleteLast()">Delete Last Entry</button>
+            <button onclick="display()">Display</button>
+        </div>
+        <br>
+        <hr>
+        <footer>
+            <p>
+                <a href="../index.html">Back to Landing Page</a>
+            </p>
+        </footer>
+    </body>
+</html>

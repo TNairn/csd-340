@@ -1,0 +1,50 @@
+h1, h3, p, ul, button, input {
+    font-family: 'Play', sans-serif;
+}
+
+#container {
+    margin-top: 50px;
+    margin-left: 50px;
+}
+
+span {
+    color: blue;
+    font-weight: 600;
+}
+
+input {
+    font-size: large;
+}
+
+button {
+    color: blue;
+    font-size: large;
+}
+
+ul {
+    font-size: larger;
+    margin-left: 10px;
+    list-style-type: none;
+    color: blue;
+}
+
+footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+
+footer a {
+    float: right;
+    text-decoration: none;
+    font-family: 'Titillium Web', sans-serif;
+    font-size: 14pt;
+    color: blue;
+    padding-right: 15px;
+    padding-bottom: 15px;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
